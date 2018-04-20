@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>CannyJS demo</title>
+    <script src="js/canny.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<h1>Implementation of Canny Edge Detection</h1>
+
+<div class="sk-circle" id="loader">
+    <div class="sk-circle1 sk-child"></div>
+    <div class="sk-circle2 sk-child"></div>
+    <div class="sk-circle3 sk-child"></div>
+    <div class="sk-circle4 sk-child"></div>
+    <div class="sk-circle5 sk-child"></div>
+    <div class="sk-circle6 sk-child"></div>
+    <div class="sk-circle7 sk-child"></div>
+    <div class="sk-circle8 sk-child"></div>
+    <div class="sk-circle9 sk-child"></div>
+    <div class="sk-circle10 sk-child"></div>
+    <div class="sk-circle11 sk-child"></div>
+    <div class="sk-circle12 sk-child"></div>
+</div>
+
+<div class="switch-img-btn">
+    <div class="btn-group" role="group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Switch image:</span>
+        </div>
+        <button class="btn btn-primary" id="image1" value="assets/mikky.jpeg">Cartoon</button>
+        <button class="btn btn-info" id="image2" value="assets/001.jpg">Car</button>
+        <button class="btn btn-warning" id="image3" value="assets/bookpage1.jpg">Book page</button>
+    </div>
+</div>
+
+<div class="options">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">high threshold (0-255):</span>
+        </div>
+        <input type="text" id="high-threshold" value="100"/>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">low threshold (0-255):</span>
+        </div>
+        <input type="text" id="low-threshold" value="50"/>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">sigmma (0.0-):</span>
+        </div>
+        <input type="text" id="sigmma" value="1.4"/>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">kernel size (odd number):</span>
+        </div>
+        <input type="text" id="kernelSize" value="3"/>
+    </div>
+</div>
+
+<div class="btn-detect-edges">
+    <button id="execute" class="btn btn-success">Detect edges</button>
+
+    <label class="btn btn-danger browse">
+        Browse image<input type="file" id="browse-image" hidden>
+    </label>
+</div>
+
+<img class="previewImg" src="" height="200" alt="Image preview...">
+
+
+<canvas id="canvas1" width="400px" height="600px"></canvas>
+<canvas id="canvas2" width="400px" height="600px"></canvas>
+
+</body>
+</html>
